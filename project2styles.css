@@ -1,0 +1,88 @@
+/* Apply general styling to all form elements */
+form.survey {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f5b67a;
+}
+
+body.main-form {
+    background-color: aqua;
+}
+
+/* Styling for highlight */
+.unanswered {
+    border: 1px solid red;
+}
+
+/* Apply styling to question labels */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Apply styling to radio buttons and their labels */
+input[type="radio"] {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/* Apply styling to text inputs and select elements */
+input[type="text"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+/* Apply styling to submit button */
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Apply styling to links */
+a {
+    display: block;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    border-style: double;
+    font-weight: bold;
+    color: black;
+}
+
+/* Apply styling to submit page */
+body.submit-page {
+    background-color: #90EE90;
+    padding: 20px;
+}
+
+.thanks {
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Apply styling to data page results */
+body.data-page {
+    background-color: aqua;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #555;
+}
