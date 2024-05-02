@@ -4,6 +4,7 @@
 <head>
     <title>Survey: PHP Questions</title>
     <link rel="stylesheet" href="project2styles.css">
+    <script src="project2.js"></script>
 </head>
 
 <body class="main-form">
@@ -11,13 +12,17 @@
     <form action="project2submit.php" method="post" class="survey">
         <fieldset>
             <label>Enter your email: </label>
-            <input type="email" name="email-name" id="email-id" required>
+            <div id="tool" title="Enter a valid email address (smith@example.com)">
+                <input type="email" name="email-name" id="email-id" required>
+            </div>
 
             <label>Enter your password: </label>
-            <input type="password" name="pw-name" id="pw-id" required>
+            <div id="tool" title="Password is case sensitive and must conatin at least 8 characters">
+                <input type="password" name="pw-name" id="pw-id" required>
+            </div>
         </fieldset>
 
-        <div>
+        <div id="tool" title="Select an option that identifies your current age">
             <label>What age are you? </label>
             <div>
                 <label> <input type="radio" name="age" id="age-0" value="0" required>0-12 </label>
@@ -33,7 +38,7 @@
             </div>
         </div>
 
-        <div>
+        <div id="tool" title="Please select an option that best describes your gender">
             <select name="gender" id="gender" required>
                 <option value="">--Please select your gender--</option>
                 <option value="ma">Male</option>
@@ -45,7 +50,7 @@
             </select>
         </div>
 
-        <div>
+        <div id="tool" title="If you are currently using version 7.4, please enter 7">
             <label> What version of PHP do you use? (only include the main version number) <input type="number"
                     name="version" id="version" min="1" max="9" required> </label>
         </div>
@@ -55,7 +60,10 @@
                 Please answer in 120 characters or fewer.
             </div>
             <label> What is your favorite part of PHP?
-                <input type="text" name="favorite" id="favorite" required></label>
+                <div id="tool" title="Please share what you enjoy most about PHP">
+                    <input type="text" name="favorite" id="favorite" required>
+            </label>
+        </div>
         </div>
 
         <button type="submit" name="button-submit-form" id="button-submit-form-id">Submit</button>
