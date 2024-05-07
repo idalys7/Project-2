@@ -205,37 +205,52 @@
          */
         function pretty_display($data_array)
         {
-            print ("<div>");
+            print ("<div style='border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9;'>");
             foreach ($data_array as $key => $value) {
-                print ("<div>$key: $value</div>");
+                print ("<div style='margin-bottom: 5px;'><strong>$key:</strong> $value</div>");
             }
             print ("</div>");
         }
 
-        print ("<h1>Survey Data</h1>");
+        // Output the survey data with inline styles
+        print ("<div style='border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9;'>");
+        print ("<h1 style='margin-bottom: 10px;'>Survey Data</h1>");
 
         $prep_selectnum = $db->prepare("SELECT count(email) FROM project_data");
         $prep_selectnum->execute();
         $num_data = $prep_selectnum->fetchAll();
         $num = $num_data[0][0];
 
+        print ("<div style='margin-bottom: 10px;'>");
         print ("<h2>Number of respondents:</h2>");
-        print ("<div>$num</div>");
+        print ("<div style='border: 1px solid #ddd; padding: 5px; border-radius: 3px;'>$num</div>");
+        print ("</div>");
+
+        print ("<div style='margin-bottom: 10px;'>");
         print ("<h2>Age Data:</h2>");
         pretty_display(age_distribution());
+        print ("</div>");
+
+        print ("<div style='margin-bottom: 10px;'>");
         print ("<h2>Gender Data:</h2>");
         pretty_display(gender_distribution());
+        print ("</div>");
+
+        print ("<div style='margin-bottom: 10px;'>");
         print ("<h2>PHP Version Data:</h2>");
         pretty_display(version_distribution());
+        print ("</div>");
 
-
+        print ("<div style='margin-bottom: 10px;'>");
         print ("<h2>Favorite thing about PHP:</h2>");
         print ("<div>");
         foreach (favorite_thing() as $value) {
-            print ("<div>$value</div>");
+            print ("<div style='border: 1px solid #ddd; padding: 5px; border-radius: 3px; margin-bottom: 5px;'>$value</div>");
         }
         print ("</div>");
+        print ("</div>");
 
+        print ("</div>");
         ?>
     </div>
     <button type="button" name="button-convert" id="button-convert-id">Numbers to Words</button>
