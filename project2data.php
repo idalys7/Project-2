@@ -254,6 +254,15 @@
         ?>
     </div>
     <button type="button" name="button-convert" id="button-convert-id">Numbers to Words</button>
+    <script>
+        /** Add event listener to the button */
+        const convert = document.getElementById('button-convert-id');
+        if (convert) {
+            convert.addEventListener('click', function () {
+                convertNumbersToWordsOnPage();
+            });
+        }
+    </script>
     <script src="project2.js"></script>
 </body>
 
