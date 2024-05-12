@@ -10,11 +10,6 @@ body.main-form {
     background-color: aqua;
 }
 
-/* Styling for highlight */
-.unanswered {
-    border: 1px solid red;
-}
-
 /* Apply styling to question labels */
 label {
     display: block;
